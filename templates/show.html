@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>学生管理系统</title>
+</head>
+
+<body>
+    <h1>学生管理系统</h1><br>
+    <form method="post" action="/show/search">
+        <input type="text" name="search"></input>
+        <input type="submit" value="search"></input>
+    </form>
+    <table border=1>
+        <thead>
+            <td>name</td>
+            <td>ID</td>
+            <td>gender</td>
+            <td>GPA</td>
+            <td></td>
+            <td></td>
+        </thead>
+        {% for row in rows %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td><a href="/update/{{row[1]}}" name="update">修改</a></td>
+            <td>
+                <a href="/delete/{{row[1]}}" name="delete">删除</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">返回</a>
+</body>
+
+</html>

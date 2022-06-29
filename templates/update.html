@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>学生管理系统</title>
+</head>
+
+<body>
+    <h1>学生管理系统</h1><br>
+    <form action="http://localhost:5000/update/{{ID}}" method="post">
+        姓名：<input type="text" name="name"><br>
+        <!-- 学号：<input type="text" name="ID"><br> -->
+        性别：<input type="text" name="gender"><br>
+        GPA：<input type="text" name="GPA"><br>
+        <input type="submit" value="修改"><br>
+        <a>
+            <font color=red>{{msg}}</font><br>
+        </a>
+    </form>
+    <a href="/">返回</a>
+</body>
+
+</html>
